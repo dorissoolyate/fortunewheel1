@@ -1,12 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="fortunewheel.Views.WheelPage"
-             Title="WheelPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             x:Class="Views.WheelPage"
+             Title="Spin the Fortune Wheel"
+            BackgroundColor="LightYellow">
+
+    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <!-- Приветственное сообщение -->
+        <Label Text="Spin the Wheel and you will get a surprise letter"
+           LineBreakMode="WordWrap"
+           FontSize="24"
+           FontAttributes="Bold"
+           TextColor="Black"
+           HorizontalTextAlignment="Center"
+           VerticalOptions="Start"
+           Margin="0,10,0,20" />
+
+        <!-- Изображение колеса фортуны (картинка будет вращаться) -->
+        <Image x:Name="WheelImage"
+           Source="wheel.png"
+           WidthRequest="300"
+           HeightRequest="300"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+
+        <!-- Кнопка для вращения колеса -->
+        <Button Text="Spin the Wheel"
+            BackgroundColor="MediumSeaGreen"
+            TextColor="White"
+            FontSize="18"
+            Clicked="OnSpinClicked"
+            HorizontalOptions="Center"
+            WidthRequest="200"
+            Margin="0,20,0,10" />
+
+        <!-- Кнопка для перехода к описанию результата -->
+        <Button Text="Описание результата"
+            BackgroundColor="SlateBlue"
+            TextColor="White"
+            FontSize="18"
+            Clicked="OnDescriptionClicked"
+            HorizontalOptions="Center"
+            WidthRequest="200"
+            IsVisible="False"
+            x:Name="DescriptionButton"
+            Margin="0,10,0,20" />
+
+        <!-- Дополнительная кнопка подсказки -->
+        <Button Text="Hint"
+            BackgroundColor="MediumPurple"
+            TextColor="White"
+            FontSize="18"
+            Clicked="OnDescriptionClicked"
+            HorizontalOptions="Center"
+            WidthRequest="200"
+            Margin="0,10,0,10" />
     </VerticalStackLayout>
+
 </ContentPage>
+    
+    <!--ddsd-->
