@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="fortunewheel.Views.WelcomePage"
-             Title="WelcomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             x:Class="Views.WelcomePage"
+             Title="Fortune Wheel"
+             BackgroundColor="LightYellow">
+
+    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <!-- Приветственное сообщение -->
+        <Label Text="Welcome to Fortune Wheel!"
+           FontSize="24"
+           FontAttributes="Bold"
+           TextColor="Black"
+           HorizontalTextAlignment="Center"
+           VerticalOptions="Start"
+           Margin="0,30,0,20" />
+
+        <!-- Картинка, которая будет вращаться -->
+        <Image x:Name="RotatingImage"
+           Source="wizard.png"
+           WidthRequest="200"
+           HeightRequest="200"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+
+        <!-- Кнопка для перехода -->
+        <Button Text="Start"
+            BackgroundColor="MediumSeaGreen"
+            TextColor="White"
+            FontSize="18"
+            WidthRequest="200"
+            HeightRequest="50"
+            CornerRadius="25"
+            Clicked="OnStartClicked"
+            HorizontalOptions="Center"
+            Margin="0,20,0,30" />
     </VerticalStackLayout>
+
 </ContentPage>
+    <!--aaa-->
